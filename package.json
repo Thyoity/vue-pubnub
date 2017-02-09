@@ -1,0 +1,27 @@
+{
+  "name": "vue-pubnub",
+  "version": "1.0.0",
+  "description": "A Vue.js 2 plugin for PubNub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thyoity/vue-pubnub.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue",
+    "pubnub"
+  ],
+  "dependencies": {
+    "pubnub": "^4.4.3"
+  },
+  "author": "Thiago Yoithi <thyoity@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thyoity/vue-pubnub/issues"
+  },
+  "homepage": "https://github.com/thyoity/vue-pubnub#readme"
+}
