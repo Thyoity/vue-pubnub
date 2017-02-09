@@ -1,13 +1,13 @@
 /**
- * Importing pusher
+ * Importing PubNub javascript library
  */
 var PubNub = require('pubnub');
 
 /**
  * VuePubNub class.
  *
- * @param {String} subscribeKey
  * @param {Object} options
+ * @param {VuePubNub.pubnubInstance} pubnubInstance
  */
 function VuePubNub (options, pubnubInstance) {
     this.pubnubInstance = pubnubInstance;
@@ -18,22 +18,21 @@ function VuePubNub (options, pubnubInstance) {
 VuePubNub.prototype.load = function () {
     this.pubnubInstance(new PubNub(this.options));
     this.initialized = true;
-}
+};
 
 VuePubNub.prototype.isInitialized = function () {
     return this.initialized;
-}
+};
 
 VuePubNub.prototype.setOptions = function (options) {
     this.options = options;
     this.load();
-}
+};
 
 module.exports = {
     install: function (Vue, options) {
-        var pluginInstance = new VuePubNub(options, function(instance){
-        	Vue.prototy.$pubnub = instance;
+        Vue.prototype.pubnub = new VuePubNub(options, function(instance){
+        	Vue.prototype.$pubnub = instance;
         });
-        Vue.prototype.pubnub = pluginInstance;
     }
 };
