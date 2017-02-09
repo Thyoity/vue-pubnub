@@ -10,7 +10,7 @@ var PubNub = require('pubnub');
  * @param {Object} options
  */
 function VuePubNub (subscribeKey, options) {
-    this.pubnubInstance = null;
+    this.pubnubInstance;
     this.initialized = false;
     this.configs = {
         subscribeKey: subscribeKey
