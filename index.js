@@ -9,14 +9,14 @@ var PubNub = require('pubnub');
  * @param {String} subscribeKey
  * @param {Object} options
  */
-function VuePubNub (options) {
-    this.pubnubInstance;
+function VuePubNub (options, pubnubInstance) {
+    this.pubnubInstance = pubnubInstance;
     this.initialized = false;
     this.options = options;
 }
 
 VuePubNub.prototype.load = function () {
-    this.pubnubInstance = new PubNub(this.options);
+    this.pubnubInstance(new PubNub(this.options));
     this.initialized = true;
 }
 
@@ -31,8 +31,9 @@ VuePubNub.prototype.setOptions = function (options) {
 
 module.exports = {
     install: function (Vue, options) {
-        var pluginInstance = new VuePubNub(options);
+        var pluginInstance = new VuePubNub(options, function(instance){
+        	Vue.prototy.$pubnub = instance;
+        });
         Vue.prototype.pubnub = pluginInstance;
-        Vue.prototype.$pubnub = pluginInstance.pubnubInstance;
     }
 };
