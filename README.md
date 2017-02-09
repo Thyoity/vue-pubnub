@@ -1,2 +1,2 @@
-# vue-pubnub
-A VueJS 2 plugin for PubNub
+# VueJS 2 PubNub
+A PubNub plugin for VueJS 2
