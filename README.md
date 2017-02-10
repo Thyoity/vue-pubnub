@@ -8,6 +8,10 @@ To make PubNub instance available inside your components.
 
 ## How to use it
 
+### Install using NPM using root privileges
+
+sudo npm install --save vue-pubnub
+
 ### Set your VueJS 2 to use vue-pubnub plugin
 
 ~~~js
