@@ -79,3 +79,7 @@ export default {
 ## Additional informations
 
 Note that inside components, this.pubnub references the vue-pubnub plugin instance, and this.$pubnub references the PubNub instance. You can see all PubNub instance available methods and options in the [oficial documentation](https://www.pubnub.com/docs/web-javascript/data-streams-publish-and-subscribe).
+
+### Support
+
+Contact me if you need any help: thyoity@gmail.com
